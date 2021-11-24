@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Przelicznik walut</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <br /><br />
+      <h1 class="container-h1">Przelicznik walut na PLN</h1>
+      <form id="myForm">
+        <br /><br />
+        <label class="label" for="Twoja waluta">
+          <p class="label-title">Twoja waluta</p>
+        </label>
+        <select class="form-control" id="base">
+          <option value="EUR">EUR<span id="EUR-API"></span></option>
+          <option value="USD">USD<span id="USD-API"></span></option>
+          <option value="CHF">CHF<span id="CHF-API"></span></option>
+        </select>
+        <br />
+        <div class="form-group">
+          <input
+            id="baseCurrency"
+            type="number"
+            class="form-control"
+            value="0"
+          />
+        </div>
+        <label for="Wybrana waluta">
+          <p class="label-title">Wybrana waluta</p>
+        </label>
+
+        <select class="form-control" id="target">
+          <option>PLN</option>
+        </select>
+        <br />
+        <div class="form-group">
+          <input
+            id="targetCurrency"
+            type="number"
+            class="form-control"
+            value="0"
+          />
+        </div>
+      </form>
+      <div></div>
+      <div class="container-btn">
+        <button id="btn-count" class="btn-count">Przelicz</button>
+        <button id="btn-reset" class="btn-reset">Reset</button>
+      </div>
+      <div class="count-output">
+        PLN:&nbsp;<span id="count-output">0</span>zł
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
