@@ -9,14 +9,14 @@
   </head>
 
   <body>
-    <div class="container">
+    <section id="wrapper">
       <br /><br />
-      <h1 class="container-h1">Przelicznik walut na PLN</h1>
+      <h1 class="container-title">Przelicznik walut</h1>
       <form id="myForm">
-        <br /><br />
+        <!-- <br /><br />
         <label class="label" for="Twoja waluta">
           <p class="label-title">Twoja waluta</p>
-        </label>
+        </label> -->
         <select class="form-control" id="base">
           <option value="EUR">EUR<span id="EUR-API"></span></option>
           <option value="USD">USD<span id="USD-API"></span></option>
@@ -28,25 +28,27 @@
             id="baseCurrency"
             type="number"
             class="form-control"
-            value="0"
+            min="0"
+            placeholder="wpisz kwotę"
           />
+          <!-- value="0" -->
         </div>
-        <label for="Wybrana waluta">
+        <!-- <label for="Wybrana waluta">
           <p class="label-title">Wybrana waluta</p>
-        </label>
+        </label> -->
 
-        <select class="form-control" id="target">
+        <!-- <div class="form-control" id="target">
           <option>PLN</option>
-        </select>
-        <br />
-        <div class="form-group">
+        </div>
+        <br /> -->
+        <!-- <div class="form-group">
           <input
             id="targetCurrency"
             type="number"
             class="form-control"
             value="0"
           />
-        </div>
+        </div> -->
       </form>
       <div></div>
       <div class="container-btn">
@@ -54,9 +56,9 @@
         <button id="btn-reset" class="btn-reset">Reset</button>
       </div>
       <div class="count-output">
-        PLN:&nbsp;<span id="count-output">0</span>zł
+        PLN:&nbsp;<span id="count-output">zero</span>&nbsp;zł
       </div>
-    </div>
+    </section>
     <script src="/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wrapper {
+  margin: auto auto;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: gray;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+.container-title {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-align: center;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+}
+#myForm {
+  background-color: red;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  height: 30px;
+  /* height: 10px; */
+}
+.form-control {
+  background-color: pink;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  flex-direction: row;
+  border: 2px solid black;
+}
+.form-group {
+  background-color: blue;
+  display: flex;
+  /* flex-direction: column; */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container-btn {
+  background-color: orange;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#btn-count {
+  background-color: rgb(255, 0, 242);
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+#btn-reset {
+  background-color: rgb(21, 255, 0);
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+
+.count-output {
+  background-color: #84b48b;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
