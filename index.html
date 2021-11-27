@@ -4,60 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Przelicznik walut</title>
+    <title>Currency converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/style.css" />
   </head>
 
   <body>
     <section id="wrapper">
+      <h1 class="title">currency converter</h1>
       <br /><br />
-      <h1 class="container-title">Przelicznik walut</h1>
-      <form id="myForm">
-        <!-- <br /><br />
-        <label class="label" for="Twoja waluta">
-          <p class="label-title">Twoja waluta</p>
-        </label> -->
-        <select class="form-control" id="base">
+      <form id="form">
+        <div>
+          <input
+            id="startCount"
+            type="number"
+            class="form-input"
+            min="0"
+            placeholder="enter the amount"
+          />
+        </div>
+        <select class="form-input" id="start">
           <option value="EUR">EUR<span id="EUR-API"></span></option>
           <option value="USD">USD<span id="USD-API"></span></option>
           <option value="CHF">CHF<span id="CHF-API"></span></option>
         </select>
-        <br />
-        <div class="form-group">
-          <input
-            id="baseCurrency"
-            type="number"
-            class="form-control"
-            min="0"
-            placeholder="wpisz kwotę"
-          />
-          <!-- value="0" -->
-        </div>
-        <!-- <label for="Wybrana waluta">
-          <p class="label-title">Wybrana waluta</p>
-        </label> -->
-
-        <!-- <div class="form-control" id="target">
-          <option>PLN</option>
-        </div>
-        <br /> -->
-        <!-- <div class="form-group">
-          <input
-            id="targetCurrency"
-            type="number"
-            class="form-control"
-            value="0"
-          />
-        </div> -->
       </form>
-      <div></div>
-      <div class="container-btn">
-        <button id="btn-count" class="btn-count">Przelicz</button>
-        <button id="btn-reset" class="btn-reset">Reset</button>
+      <br />
+      <button id="btnResult" class="result">count</button>
+      <br />
+      <div class="result-style">
+        the result of the exchange:&nbsp;<span id="score">0</span>&nbsp;PLN
       </div>
-      <div class="count-output">
-        PLN:&nbsp;<span id="count-output">zero</span>&nbsp;zł
-      </div>
+      <br />
+      <button id="btnReset" class="reset">reset</button>
     </section>
     <script src="/script.js"></script>
   </body>

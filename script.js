@@ -1,32 +1,29 @@
-const targetCurrencyEl = document.querySelector("#targetCurrency");
-const baseCurrencyEl = document.querySelector("#baseCurrency");
-const resetEl = document.querySelector("#btn-reset");
-const countEl = document.querySelector("#btn-count");
-const outputEl = document.querySelector("#count-output");
-let selectedCurrency = "EUR";
+const startEl = document.querySelector("#startCount");
+const resetEl = document.querySelector("#btnReset");
+const countEl = document.querySelector("#btnResult");
+const scoreEl = document.querySelector("#score");
+let firstChoose = "EUR";
 
-document.getElementById("base").addEventListener("change", function () {
-  selectedCurrency = this.value;
+document.getElementById("start").addEventListener("change", function () {
+  firstChoose = this.value;
 });
 
-document.getElementById("btn-count").addEventListener("click", function () {
-  let loader = `<div class="boxLoading"></div>`;
-  document.getElementById("count-output").innerHTML = loader;
-  fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${selectedCurrency}`)
+document.getElementById("btnResult").addEventListener("click", function () {
+  let loader = `<div></div>`;
+  document.getElementById("score").innerHTML = loader;
+  fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${firstChoose}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.rates[0].mid * baseCurrencyEl.value);
-      outputEl.innerHTML = Number(
-        data.rates[0].mid * baseCurrencyEl.value
-      ).toFixed(2);
+      console.log(data.rates[0].mid * startEl.value);
+      scoreEl.innerHTML = Number(data.rates[0].mid * startEl.value).toFixed(2);
     })
     .catch((err) => {
       console.log(err);
     });
 });
 
-document.getElementById("btn-reset").addEventListener("click", function () {
-  baseCurrencyEl.value = 0;
-  targetCurrencyEl.value = 0;
-  document.querySelector("#count-output").innerHTML = ":" + " " + 0;
+document.getElementById("btnReset").addEventListener("click", function () {
+  startEl.value = 0;
+
+  document.querySelector("#score").innerHTML = ":" + " " + 0;
 });
