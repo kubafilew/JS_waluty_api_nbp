@@ -4,14 +4,11 @@
   box-sizing: border-box;
 }
 body {
-  margin: auto auto;
-  width: auto;
-  height: auto;
   background-color: rgb(187, 187, 187);
 }
 #wrapper {
   margin: auto auto;
-  width: 420px;
+  width: 42vw;
   height: auto;
   display: flex;
   justify-content: center;
