@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 body {
+  margin: auto auto;
+  width: auto;
+  height: auto;
   background-color: rgb(187, 187, 187);
 }
 #wrapper {
