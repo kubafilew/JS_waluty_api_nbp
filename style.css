@@ -8,7 +8,7 @@ body {
 }
 #wrapper {
   margin: auto auto;
-  width: 42vw;
+  width: 420px;
   height: auto;
   display: flex;
   justify-content: center;
